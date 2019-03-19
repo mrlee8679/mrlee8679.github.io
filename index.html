@@ -62,108 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTML的知识part2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/18/HTML的知识part2/" class="article-date">
-  <time datetime="2019-03-18T09:59:22.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/HTML的知识part2/">HTML的知识part2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这次我就来介绍一下 HTML 的常用标签如:<br>&lt; a &gt;;<br>&lt; form &gt;;<br>&lt; h1 &gt; ~ &lt; h6 &gt;;<br>&lt; iframe &gt;;<br>&lt; input &gt;;<br>&lt; selet &gt;;<br>&lt; textarea &gt;;<br>&lt; table &gt;。</p>
-<p><strong>#&lt; a &gt;</strong></p>
-<p>&lt; a &gt;：anchor ,可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接，即定义超链接。</p>
-<p>属性</p>
-<p>download</p>
-<p>此属性指示浏览器下载 URL 而不是导航到它，因此将提示用户将其保存为本地文件。</p>
-<p>href</p>
-<p>包含超链接指向的 URL 或 URL 片段。一般基于 Web（HTTP）的文档时域名会加上 http：或 https：，当然也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的file:、ftp:和mailto：。（// 即代表无协议）。<br>当 href=”#” 时，页面并不会发请求，而是会返回到页面顶部。<br>当 href=”javascript:;” 时，这是一个伪装协议，伪协议可以实现「点击之后没有任何动作的 a 标签」。</p>
-<p>target</p>
-<p>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。<br>当 target=”_blank”时，会打开新页面；<br>当 target=”_self”时，会在当前页面加载；<br>当 target=”_parent”时，会在当前父级页面加载页面；<br>当 target=”_top”时，会在当前顶级页面加载页面。</p>
-<p><strong>#&lt; form &gt;</strong></p>
-<p>&lt; from &gt;：表示了文档中的一个区域，这个区域包含有交互控制元件，用来向web服务器提交信息。</p>
-<p>属性</p>
-<p>action<br>一个处理这个form信息的程序所在的URL。这个值可以被 &lt; button &gt; 或者 &lt; input &gt; 元素中的 formaction 属性重载（覆盖）。当&lt; form &gt;标签里面没有提交按钮是，不能将信息提交。&lt; input &gt;标签里当其 type=submit,时是唯一能确定该表单能被提交。<br>若用&lt; button &gt;标签标示提交按钮时，而且若表单里只有一个按钮时，且没有定义该&lt; button &gt;属性时，该&lt; button &gt;标签会自动升级为提交按钮；若该&lt; button &gt;标签被 type 属性定义时，则不会自动升级为提交按钮。</p>
-<p><strong>#&lt; h1 &gt; ~ &lt; h6 &gt;</strong></p>
-<p>&lt; h1 &gt;-&lt; h6 &gt;：heading，呈现了六个不同的级别的标题，&lt; h1 &gt; 级别最高，而 &lt; h6 &gt; 级别最低。使用时注意，不要为了减小标题的字体而使用低级别的标题；避免跳过某级标题：始终要从 &lt; h1 &gt; 开始，接下来依次使用 &lt; h2 &gt; 等等；使用 &lt; section &gt; 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 &lt; h1 &gt;，&lt; h1 &gt; 应被用于表示页面的标题，其他的标题当从 &lt; h2 &gt; 开始。在使用 section 时，应当为每个 section 都使用一个 &lt; h2 &gt;。</p>
-<p><strong>#&lt; iframe &gt;</strong></p>
-<p>&lt; iframe &gt;：Inline frame，内联框架表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。</p>
-<p>属性</p>
-<p>frameborder</p>
-<p>取值为1时，告诉浏览器在当前iframe与其他iframe之间绘制边框，取0时则无需绘制此边框。</p>
-<p>name</p>
-<p>嵌入的浏览上下文（框架）的名称。该名称可以用作&lt; a &gt;标签，&lt; form &gt;标签的target属性值，或&lt; input &gt; 标签和 &lt; button &gt;标签的formtaget属性值。</p>
-<p>src</p>
-<p>嵌套页面的URL地址。使用遵守同源策略的 ‘about:blank’ 来嵌套空白页。</p>
-<p><strong>#&lt; input &gt;</strong></p>
-<p>&lt; input &gt;：用于为基于Web的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和user agent。是空元素。<br>&lt; input &gt;的工作方式因其类型属性的值而有很大差异，不同的类型会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 text 。</p>
-<p>&lt; input &gt;的类型</p>
-<p>button</p>
-<p>无缺省行为按钮。</p>
-<p>checkbook</p>
-<p>复选框必须使用 value 属性定义此控件被提交时的值。</p>
-<p>password</p>
-<p>一个值被遮盖的单行文本字段。使用 maxlength 指定可以输入的值的最大长度 。</p>
-<p>radio</p>
-<p>单选按钮。必须使用 value 属性定义此控件被提交时的值。在同一个“单选按钮组”中，所有单选按钮的 name 属性使用同一个值； 一个单选按钮组中是，同一时间只有一个单选按钮可以被选择。</p>
-<p>submit</p>
-<p>用于提交表单的按钮。</p>
-<p>text</p>
-<p>单行字段；换行会将自动从输入的值中移除。</p>
-<p>使用 label  “for” 属性 绑定到 input “id”属性上时，可以用&lt; label &gt;标签将&lt; input &gt;标签包起来来代替，这样可以减少变量的输入。如：</p>
-<p><img src="/2019/03/18/HTML的知识part2/input1.png" alt="使用 label  &quot;for&quot; 属性时"></p>
-<p><img src="/2019/03/18/HTML的知识part2/input2.png" alt="用&lt; label &gt;标签将&lt; input &gt;标签包起来"></p>
-<p><strong>#&lt; selet &gt;</strong></p>
-<p>&lt; selet &gt;：表示一个控件，提供一个选项菜单，菜单内的选项为&lt; option &gt;。</p>
-<p>属性</p>
-<p>disabled</p>
-<p>这个属性表明一个用户是否可以操控该表单对象。 如果这个属性被定义时，则对应选项不可选。</p>
-<p>multiple</p>
-<p>这个属性标记select是否可以多选. 默认是单选。</p>
-<p><strong>#&lt; textarea &gt;</strong></p>
-<p>&lt; textarea &gt;：一个多行纯文本编辑控件。</p>
-<p>属性</p>
-<p>cols</p>
-<p>文本域的可视宽度，必须为正数。</p>
-<p>name</p>
-<p>元素的名称。</p>
-<p>rows</p>
-<p>元素的输入文本的行数（显示的高度）。<br>使用 row 和 cols 不能精确控制文本域的宽高，最好使用 CSS控制文本域的宽高。</p>
-<p><strong>#&lt; table &gt;</strong></p>
-<p>&lt; table &gt;：表示表格数据 — 即通过二维数据表表示的信息。该元素中只能允许有以下元素：<br>一个可选的 &lt; caption &gt; 元素<br>零个或多个的 &lt; colgroup &gt; 元素<br>一个可选的 &lt; thead &gt; 元素<br>一个可选的 &lt; tfoot &gt; 元素（&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以。）<br>零个或多个 &lt; tbody &gt; 元素<br>一个或多个 &lt; tr &gt; 元素<br>在有 &lt; thead &gt; 元素下&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以，浏览器会自动排序。<br>在&lt; tr &gt;元素里，表头要用&lt; th &gt;，数据用&lt; td &gt;。</p>
-<p>属性</p>
-<p>bgcolor </p>
-<p>这个属性定义了表格的背景颜色。 </p>
-<p>border </p>
-<p>这个整型元素使用像素，定义了表格边框的大小。如果设置为0，这意味着frame 属性被设置为空。如果设置为1，表示表格具有1px大小的边框。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/18/HTML的知识part2/" data-id="cjtg1mt1t0001uor0jff8y1ac" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-HTML的知识part1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/13/HTML的知识part1/" class="article-date">
@@ -222,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/HTML的知识part1/" data-id="cjtg1mt1k0000uor0zgk8b5f0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/13/HTML的知识part1/" data-id="cjtg1zyld0000p0r04k0tenbq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -293,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/HTTP的介绍/" data-id="cjtg1mt260004uor0x3oc3wdc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/13/HTTP的介绍/" data-id="cjtg1zylw0003p0r0vwkkmx63" class="article-share-link">Share</a>
       
       
     </footer>
@@ -334,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/04/第二篇博客/" data-id="cjtg1mt210003uor0o2p0sukv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/04/第二篇博客/" data-id="cjtg1zylr0002p0r0ggmfxq0l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -371,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/04/开博大吉/" data-id="cjtg1mt1w0002uor01tcd10hm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/04/开博大吉/" data-id="cjtg1zyln0001p0r0blxi0sk5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -410,10 +308,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2019/03/18/HTML的知识part2/">HTML的知识part2</a>
-          </li>
         
           <li>
             <a href="/2019/03/13/HTML的知识part1/">HTML的知识part1</a>
