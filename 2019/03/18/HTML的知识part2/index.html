@@ -16,7 +16,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input2.png">
-<meta property="og:updated_time" content="2019-03-19T16:57:53.981Z">
+<meta property="og:updated_time" content="2019-03-19T17:19:33.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML的知识part2">
 <meta name="twitter:description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt; a &amp;gt;;&amp;lt; form &amp;gt;;&amp;lt; h1 &amp;gt; ~ &amp;lt; h6 &amp;gt;;&amp;lt; iframe &amp;gt;;&amp;lt; input &amp;gt;;&amp;lt; selet &amp;gt;;&amp;lt; textarea &amp;gt;;&amp;lt; table &amp;gt;。 #&amp;lt; a &amp;gt; &amp;lt; a &amp;gt;：anchor ,可以创建通">
@@ -104,7 +104,7 @@
 <p>属性</p>
 <p>action<br>一个处理这个form信息的程序所在的URL。这个值可以被 &lt; button &gt; 或者 &lt; input &gt; 元素中的 formaction 属性重载（覆盖）。当&lt; form &gt;标签里面没有提交按钮是，不能将信息提交。&lt; input &gt;标签里当其 type=submit,时是唯一能确定该表单能被提交。<br>若用&lt; button &gt;标签标示提交按钮时，而且若表单里只有一个按钮时，且没有定义该&lt; button &gt;属性时，该&lt; button &gt;标签会自动升级为提交按钮；若该&lt; button &gt;标签被 type 属性定义时，则不会自动升级为提交按钮。</p>
 <p><strong>#&lt; h1 &gt; ~ &lt; h6 &gt;</strong></p>
-<p>&lt; h1 &gt;-&lt; h6 &gt;：heading，呈现了六个不同的级别的标题，&lt; h1 &gt; 级别最高，而 &lt; h6 &gt; 级别最低。<br>使用时注意，<br>不要为了减小标题的字体而使用低级别的标题；<br>避免跳过某级标题：始终要从 </p><h1> 开始，接下来依次使用 <h2> 等等；<br>使用 <section> 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 <h1>，<h1> 应被用于表示页面的标题，其他的标题当从 <h2> 开始。在使用 section 时，应当为每个 section 都使用一个 <h2>。<p></p>
+<p>&lt; h1 &gt;-&lt; h6 &gt;：heading，呈现了六个不同的级别的标题，&lt; h1 &gt; 级别最高，而 &lt; h6 &gt; 级别最低。使用时注意，不要为了减小标题的字体而使用低级别的标题；避免跳过某级标题：始终要从 &lt; h1 &gt; 开始，接下来依次使用 &lt; h2 &gt; 等等；使用 &lt; section &gt; 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 &lt; h1 &gt;，&lt; h1 &gt; 应被用于表示页面的标题，其他的标题当从 &lt; h2 &gt; 开始。在使用 section 时，应当为每个 section 都使用一个 &lt; h2 &gt;。</p>
 <p><strong>#&lt; iframe &gt;</strong></p>
 <p>&lt; iframe &gt;：Inline frame，内联框架表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。</p>
 <p>属性</p>
@@ -149,17 +149,17 @@
 <p>rows</p>
 <p>元素的输入文本的行数（显示的高度）。<br>使用 row 和 cols 不能精确控制文本域的宽高，最好使用 CSS控制文本域的宽高。</p>
 <p><strong>#&lt; table &gt;</strong></p>
-<p>&lt; table &gt;：表示表格数据 — 即通过二维数据表表示的信息。该元素中只能允许有以下元素：<br>一个可选的 <caption> 元素<br>零个或多个的 <colgroup> 元素<br>一个可选的 <thead> 元素<br>一个可选的 <tfoot> 元素（&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以。）<br>零个或多个 <tbody> 元素<br>一个或多个 <tr> 元素<br>在有 <thead> 元素下&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以，浏览器会自动排序。<br>在&lt; tr &gt;元素里，表头要用&lt; th &gt;，数据用&lt; td &gt;。</thead></tr></tbody></tfoot></thead></colgroup></caption></p>
+<p>&lt; table &gt;：表示表格数据 — 即通过二维数据表表示的信息。该元素中只能允许有以下元素：<br>一个可选的 &lt; caption &gt; 元素<br>零个或多个的 &lt; colgroup &gt; 元素<br>一个可选的 &lt; thead &gt; 元素<br>一个可选的 &lt; tfoot &gt; 元素（&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以。）<br>零个或多个 &lt; tbody &gt; 元素<br>一个或多个 &lt; tr &gt; 元素<br>在有 &lt; thead &gt; 元素下&lt; tfoot &gt;元素出现在&lt; tbody &gt;或&lt; tr &gt;元素前后都可以，浏览器会自动排序。<br>在&lt; tr &gt;元素里，表头要用&lt; th &gt;，数据用&lt; td &gt;。</p>
 <p>属性</p>
 <p>bgcolor </p>
 <p>这个属性定义了表格的背景颜色。 </p>
 <p>border </p>
 <p>这个整型元素使用像素，定义了表格边框的大小。如果设置为0，这意味着frame 属性被设置为空。如果设置为1，表示表格具有1px大小的边框。</p>
-</h2></h2></h1></h1></section></h2></h1>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/18/HTML的知识part2/" data-id="cjtg1i2im0000c4r0b6idt1ck" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/18/HTML的知识part2/" data-id="cjtg1mt1t0001uor0jff8y1ac" class="article-share-link">Share</a>
       
       
     </footer>
