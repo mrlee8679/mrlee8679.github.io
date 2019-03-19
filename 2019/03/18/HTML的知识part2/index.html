@@ -5,15 +5,22 @@
   
 
   
-  <title>李先森的博客</title>
+  <title>HTML的知识part2 | 李先森的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="李先森的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt; a &amp;gt;;&amp;lt; form &amp;gt;;&amp;lt; h1 &amp;gt; ~ &amp;lt; h6 &amp;gt;;&amp;lt; iframe &amp;gt;;&amp;lt; input &amp;gt;;&amp;lt; selet &amp;gt;;&amp;lt; textarea &amp;gt;;&amp;lt; table &amp;gt;。 #&amp;lt; a &amp;gt; &amp;lt; a &amp;gt;：anchor ,可以创建通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML的知识part2">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/HTML的知识part2/index.html">
 <meta property="og:site_name" content="李先森的博客">
+<meta property="og:description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt; a &amp;gt;;&amp;lt; form &amp;gt;;&amp;lt; h1 &amp;gt; ~ &amp;lt; h6 &amp;gt;;&amp;lt; iframe &amp;gt;;&amp;lt; input &amp;gt;;&amp;lt; selet &amp;gt;;&amp;lt; textarea &amp;gt;;&amp;lt; table &amp;gt;。 #&amp;lt; a &amp;gt; &amp;lt; a &amp;gt;：anchor ,可以创建通">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input2.png">
+<meta property="og:updated_time" content="2019-03-19T16:57:53.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李先森的博客">
+<meta name="twitter:title" content="HTML的知识part2">
+<meta name="twitter:description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt; a &amp;gt;;&amp;lt; form &amp;gt;;&amp;lt; h1 &amp;gt; ~ &amp;lt; h6 &amp;gt;;&amp;lt; iframe &amp;gt;;&amp;lt; input &amp;gt;;&amp;lt; selet &amp;gt;;&amp;lt; textarea &amp;gt;;&amp;lt; table &amp;gt;。 #&amp;lt; a &amp;gt; &amp;lt; a &amp;gt;：anchor ,可以创建通">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input1.png">
   
     <link rel="alternate" href="/atom.xml" title="李先森的博客" type="application/atom+xml">
   
@@ -60,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-HTML的知识part2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-HTML的知识part2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/18/HTML的知识part2/" class="article-date">
   <time datetime="2019-03-18T09:59:22.000Z" itemprop="datePublished">2019-03-18</time>
@@ -75,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/HTML的知识part2/">HTML的知识part2</a>
+    <h1 class="article-title" itemprop="name">
+      HTML的知识part2
     </h1>
   
 
@@ -160,160 +165,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-HTTP的介绍" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/13/HTTP的介绍/" class="article-date">
-  <time datetime="2019-03-13T14:49:01.000Z" itemprop="datePublished">2019-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/13/HTTP的介绍/">HTTP的介绍</a>
-    </h1>
+    <a href="/2019/03/13/HTTP的介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTTP的介绍</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。</p>
-<p><strong>#客户端和服务器端交互的过程</strong><br>1.浏览器负责发起请求<br>2.服务器在 80 端口接收请求<br>3.服务器负责返回内容（响应）<br>4.浏览器负责下载响应内容</p>
-<p><strong>#请求消息结构</strong></p>
-<p>请求示例</p>
-<p>curl -X POST -d “12345678” -s -v -H “Mrlee: HELLO” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br><img src="/2019/03/13/HTTP的介绍/请求示例.png" alt="请求示例"></p>
-<p>请求的内容为</p>
-<p>POST / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.55.0<br>Accept: <em>/</em><br>Mrlee: HELLO<br>Content-Length: 8<br>Content-Type: application/x-www-form-urlencoded</p>
-<p>1234567890</p>
-<p><strong>请求的格式</strong></p>
-<p>1 动词 路径 协议/版本<br>2 Key1: value1<br>2 Key2: value2<br>2 Key3: value3<br>2 Content-Type: application/x-www-form-urlencoded<br>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2 User-Agent: curl/7.54.0<br>3<br>4 要上传的数据</p>
-<p>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）。<br>第三部分永远都是一个回车（\n）。<br>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等。<br>这里的路径包括「查询参数」，但不包括「锚点」。<br>如果你没有写路径，那么路径默认为 /。<br>第 2 部分中的 Content-Type 标注了第 4 部分的格式。</p>
-<p><strong>用Chrome看请求内容</strong></p>
-<p>1.打开 Network，<br>2.地址栏输入网址，<br>3.在 Network 点击，查看 Request Headers，<br>4.点击「view source」，<br>5.就可以看到请求的前三部分了，<br>6.如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到。</p>
-<p><img src="/2019/03/13/HTTP的介绍/看请求.png" alt="用Chrome看请求示例"></p>
-<p><strong>#响应结构</strong></p>
-<p>请求了之后，应该都能得到一个响应。</p>
-<p>响应示例</p>
-<p>刷新百度首页得到的响应。</p>
-<p><img src="/2019/03/13/HTTP的介绍/响应示例.png" alt="响应示例"></p>
-<p>响应的内容是</p>
-<p>HTTP/1.1 200 OK<br>Bdpagetype: 2<br>Bdqid: 0x8c9a57e10003b3b4<br>Cache-Control: private<br>Connection: Keep-Alive<br>Content-Encoding: gzip<br>Content-Type: text/html;charset=utf-8<br>……<br>以下省略</p>
-<p><strong>响应的格式</strong></p>
-<p>1 协议/版本号 状态码 状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容</p>
-<p>其中状态码是服务器对浏览器说的话<br>1xx消息，这一类型的状态码，代表请求已被接受，需要继续处理。<br>2xx成功，这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。<br>3xx重定向，这类状态码代表需要客户端采取进一步的操作才能完成请求。<br>4xx客户端错误，由于明显的客户端错误（例如，格式错误的请求语法，太大的大小，无效的请求消息或欺骗性路由请求），服务器不能或不会处理该请求。<br>5xx服务器错误，表示服务器无法完成明显有效的请求。<br>第 2 部分中的 Content-Type 标注了第 4 部分的格式。<br>第 2 部分中的 Content-Type 遵循 MIME 规范。</p>
-<p><strong>用 Chrome 查看响应</strong></p>
-<p>1.打开 Network，<br>2.输入网址，<br>3.选中第一个响应，<br>4.查看 Response Headers，<br>5.点击「view source」，<br>6.你会看到响应的前两部分，<br>7.查看 Response 或者 Preview，你会看到响应的第 4 部分。</p>
-<p><img src="/2019/03/13/HTTP的介绍/看响应.png" alt="用Chrome看响应示例"></p>
-<p><strong>#curl 命令的使用</strong></p>
-<p>curl是一个利用URL规则在命令行下工作的文件传输工具，可以说是一款很强大的http命令行工具。它支持文件的上传和下载，是综合传输工具，但按传统，习惯称url为下载工具。</p>
-<p>语法：# curl [option] [url]<br>常见参数：<br>-A/–user-agent <string>              设置用户代理发送给服务器<br>-b/–cookie &lt;name=string/file&gt;    cookie字符串或文件读取位置<br>-c/–cookie-jar <file>                    操作结束后把cookie写入到这个文件中<br>-C/–continue-at <offset>            断点续转<br>-D/–dump-header <file>            把header信息写入到该文件中<br>-e/–referer                                  来源网址<br>-f/–fail                                          连接失败时不显示http错误<br>-o/–output                                  把输出写到该文件中<br>-O/–remote-name                      把输出写到该文件中，保留远程文件的文件名<br>-r/–range <range>                      检索来自HTTP/1.1或FTP服务器字节范围<br>-s/–silent                            静音模式。不输出任何东西<br>如：<br>curl -s -v -H “mrlee: hello” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></range></file></offset></file></string></p>
-<p>请求的内容为</p>
-<p>GET / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.54.0<br>Accept: <em>/</em><br>mrlee: hello</p>
-<p>curl -X POST -d “12345678” -s -v -H “mrlee: hello” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br>请求的内容为</p>
-<p>POST / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.54.0<br>Accept: <em>/</em><br>mrlee: hello<br>Content-Length: 8<br>Content-Type: application/x-www-form-urlencoded</p>
-<p>12345678</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/HTTP的介绍/" data-id="cjtg0vtbk0000h8r07ngtlz8j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-第二篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/04/第二篇博客/" class="article-date">
-  <time datetime="2019-03-04T01:41:21.000Z" itemprop="datePublished">2019-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/04/第二篇博客/">某些基本基本命令行的介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#ls<br>ls是list directory的缩写，直译过来就是列出目录，所以它是用来列出目录下的文件。还能在ls命令基础上进行更具体的操作，如：<br>  ls -a 列出文件下所有的文件，包括以“.“开头的隐藏文件。<br>  ls -l 列出文件的详细信息，如创建者，创建时间，文件的读写权限列表等等。<br>  ls -al 以列表的形式整齐的列出所有文件。</p>
-<p>#cat<br>cat命令主要用来查看文件内容，创建文件，文件合并，追加文件内容等功能。如：<br>  cat filename 一次显示整个文件。<br>  cat &gt; filename 创建一个新文件。<br>  cat [filename] [filename]&gt;[filename] 合并文件。</p>
-<p>#mv<br>mv就是move的缩写，所以它就是用来移动文件或者重命名的命令。如：<br>  mv demo1.txt demo2.txt 重命名文件。<br>  mv demo1.txt demo2.txt demo 将demo1和demo2移动到demo文件夹中。</p>
-<p>#touch<br>touch命令是用来创建文件或这更新文件的时间。如：<br>  touch demo1.txt 若文件不存在就创建文件，若文件已存在就更新文件的最后编辑时间。</p>
-<p>#explainshell.com的使用技巧<br>explainshell.com是一个帮助你解释命令行的网站，会根据你想查询的命令参数来抽取对应的解释，并简洁易懂地用英语显示出来。所以做程序员要学好英语啊。<br>当我们进入explainshell.com网站，可以搜索你想知道的命令，如ls，然后网站就会就会为你解释这个命令，会显示出list directory contents，意思为列出目录内容。如果英语不好真的不好弄懂意思，所以想当程序员真的要学好英语啊。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/04/第二篇博客/" data-id="cjtg0vtet0003h8r0he8a508w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-开博大吉" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/04/开博大吉/" class="article-date">
-  <time datetime="2019-03-03T16:51:26.000Z" itemprop="datePublished">2019-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/04/开博大吉/">我开博客啦</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#哈哈哈<br>这是我的第一个博客，以后请多多指教啦。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/04/开博大吉/" data-id="cjtg0vtcg0002h8r0cle10plj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
