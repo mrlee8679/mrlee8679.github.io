@@ -7,22 +7,17 @@
   
   <title>HTTP的介绍 | 李先森的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 #客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 #请求消息结构 请求示例 curl -X">
+  <meta name="description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 请求消息结构请求示例-X POST -d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP的介绍">
 <meta property="og:url" content="http://yoursite.com/2019/03/13/HTTP的介绍/index.html">
 <meta property="og:site_name" content="李先森的博客">
-<meta property="og:description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 #客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 #请求消息结构 请求示例 curl -X">
+<meta property="og:description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 请求消息结构请求示例-X POST -d">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/03/13/HTTP的介绍/请求示例.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/13/HTTP的介绍/看请求.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/13/HTTP的介绍/响应示例.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/13/HTTP的介绍/看响应.png">
-<meta property="og:updated_time" content="2019-03-13T18:14:42.827Z">
+<meta property="og:updated_time" content="2019-03-20T15:00:18.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP的介绍">
-<meta name="twitter:description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 #客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 #请求消息结构 请求示例 curl -X">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/13/HTTP的介绍/请求示例.png">
+<meta name="twitter:description" content="HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。 客户端和服务器端交互的过程1.浏览器负责发起请求2.服务器在 80 端口接收请求3.服务器负责返回内容（响应）4.浏览器负责下载响应内容 请求消息结构请求示例-X POST -d">
   
     <link rel="alternate" href="/atom.xml" title="李先森的博客" type="application/atom+xml">
   
@@ -92,45 +87,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>HTTP(HyperText Transfer Protocol,超文本传输协议)是一种用于分布式、协作试和超媒体信息系统的应用层协议，可以看作是是从服务器传输数据到客户端的传输协议。HTTP是万维网的数据通信的基础。</p>
-<p><strong>#客户端和服务器端交互的过程</strong><br>1.浏览器负责发起请求<br>2.服务器在 80 端口接收请求<br>3.服务器负责返回内容（响应）<br>4.浏览器负责下载响应内容</p>
-<p><strong>#请求消息结构</strong></p>
-<p>请求示例</p>
-<p>curl -X POST -d “12345678” -s -v -H “Mrlee: HELLO” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br><img src="/2019/03/13/HTTP的介绍/请求示例.png" alt="请求示例"></p>
+<h2 id="客户端和服务器端交互的过程"><a href="#客户端和服务器端交互的过程" class="headerlink" title="客户端和服务器端交互的过程"></a>客户端和服务器端交互的过程</h2><p>1.浏览器负责发起请求<br>2.服务器在 80 端口接收请求<br>3.服务器负责返回内容（响应）<br>4.浏览器负责下载响应内容</p>
+<h2 id="请求消息结构"><a href="#请求消息结构" class="headerlink" title="请求消息结构"></a>请求消息结构</h2><h3 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h3><figure class="highlight plain"><figcaption><span>-X POST -d "12345678" -s -v -H "Mrlee: HELLO" -- "https://www.baidu.com"```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">![请求示例](HTTP的介绍/请求示例.png)</span><br><span class="line"></span><br><span class="line">请求的内容为</span><br><span class="line"></span><br><span class="line">&gt; POST / HTTP/1.1</span><br><span class="line">&gt; Host: www.baidu.com</span><br><span class="line">&gt; User-Agent: curl/7.55.0</span><br><span class="line">&gt; Accept: */*</span><br><span class="line">&gt; Mrlee: HELLO</span><br><span class="line">&gt; Content-Length: 8</span><br><span class="line">&gt; Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt; </span><br><span class="line">&gt; 1234567890</span><br><span class="line"></span><br><span class="line">### 请求的格式</span><br><span class="line"></span><br><span class="line">&gt; 1 动词 路径 协议/版本</span><br><span class="line">&gt; 2 Key1: value1</span><br><span class="line">&gt; 2 Key2: value2</span><br><span class="line">&gt; 2 Key3: value3</span><br><span class="line">&gt; 2 Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt; 2 Host: www.baidu.com</span><br><span class="line">&gt; 2 User-Agent: curl/7.54.0</span><br><span class="line">&gt; 3 </span><br><span class="line">&gt; 4 要上传的数据</span><br><span class="line"></span><br><span class="line">请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）。</span><br><span class="line">第三部分永远都是一个回车（\n）。</span><br><span class="line">动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等。</span><br><span class="line">这里的路径包括「查询参数」，但不包括「锚点」。</span><br><span class="line">如果你没有写路径，那么路径默认为 /。</span><br><span class="line">第 2 部分中的 Content-Type 标注了第 4 部分的格式。</span><br><span class="line"></span><br><span class="line">### 用Chrome看请求内容</span><br><span class="line"></span><br><span class="line">1.打开 Network，</span><br><span class="line">2.地址栏输入网址，</span><br><span class="line">3.在 Network 点击，查看 Request Headers，</span><br><span class="line">4.点击「view source」，</span><br><span class="line">5.就可以看到请求的前三部分了，</span><br><span class="line">6.如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到。</span><br><span class="line"></span><br><span class="line">![用Chrome看请求示例](HTTP的介绍/看请求.png)</span><br><span class="line"></span><br><span class="line">## 响应结构</span><br><span class="line"></span><br><span class="line">请求了之后，应该都能得到一个响应。</span><br><span class="line"></span><br><span class="line">### 响应示例</span><br><span class="line"></span><br><span class="line">刷新百度首页得到的响应。</span><br><span class="line"></span><br><span class="line">![响应示例](HTTP的介绍/响应示例.png)</span><br><span class="line"></span><br><span class="line">响应的内容是</span><br><span class="line"></span><br><span class="line">&gt; HTTP/1.1 200 OK</span><br><span class="line">&gt; Bdpagetype: 2</span><br><span class="line">&gt; Bdqid: 0x8c9a57e10003b3b4</span><br><span class="line">&gt; Cache-Control: private</span><br><span class="line">&gt; Connection: Keep-Alive</span><br><span class="line">&gt; Content-Encoding: gzip</span><br><span class="line">&gt; Content-Type: text/html;charset=utf-8</span><br><span class="line">&gt; ......</span><br><span class="line">&gt; 以下省略</span><br><span class="line"></span><br><span class="line">### 响应的格式</span><br><span class="line"></span><br><span class="line">&gt; 1 协议/版本号 状态码 状态解释</span><br><span class="line">&gt; 2 Key1: value1</span><br><span class="line">&gt; 2 Key2: value2</span><br><span class="line">&gt; 2 Content-Length: 17931</span><br><span class="line">&gt; 2 Content-Type: text/html</span><br><span class="line">&gt; 3</span><br><span class="line">&gt; 4 要下载的内容</span><br><span class="line"></span><br><span class="line">其中状态码是服务器对浏览器说的话</span><br><span class="line">1xx消息，这一类型的状态码，代表请求已被接受，需要继续处理。</span><br><span class="line">2xx成功，这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。</span><br><span class="line">3xx重定向，这类状态码代表需要客户端采取进一步的操作才能完成请求。</span><br><span class="line">4xx客户端错误，由于明显的客户端错误（例如，格式错误的请求语法，太大的大小，无效的请求消息或欺骗性路由请求），服务器不能或不会处理该请求。</span><br><span class="line">5xx服务器错误，表示服务器无法完成明显有效的请求。</span><br><span class="line">第 2 部分中的 Content-Type 标注了第 4 部分的格式。</span><br><span class="line">第 2 部分中的 Content-Type 遵循 MIME 规范。</span><br><span class="line"></span><br><span class="line">### 用 Chrome 查看响应</span><br><span class="line"></span><br><span class="line">1.打开 Network，</span><br><span class="line">2.输入网址，</span><br><span class="line">3.选中第一个响应，</span><br><span class="line">4.查看 Response Headers，</span><br><span class="line">5.点击「view source」，</span><br><span class="line">6.你会看到响应的前两部分，</span><br><span class="line">7.查看 Response 或者 Preview，你会看到响应的第 4 部分。</span><br><span class="line"></span><br><span class="line">![用Chrome看响应示例](HTTP的介绍/看响应.png)</span><br><span class="line"></span><br><span class="line">## curl 命令的使用</span><br><span class="line"></span><br><span class="line">curl是一个利用URL规则在命令行下工作的文件传输工具，可以说是一款很强大的http命令行工具。它支持文件的上传和下载，是综合传输工具，但按传统，习惯称url为下载工具。</span><br><span class="line"></span><br><span class="line">语法：`curl [option] [url]`</span><br><span class="line">常见参数：</span><br><span class="line">`-A/--user-agent &lt;string&gt; `             设置用户代理发送给服务器</span><br><span class="line">`-b/--cookie &lt;name=string/file&gt;`    cookie字符串或文件读取位置</span><br><span class="line">`-c/--cookie-jar &lt;file&gt; `                   操作结束后把cookie写入到这个文件中</span><br><span class="line">`-C/--continue-at &lt;offset&gt;`           断点续转</span><br><span class="line">`-D/--dump-header &lt;file&gt;`            把header信息写入到该文件中</span><br><span class="line">`-e/--referer`                                  来源网址</span><br><span class="line">`-f/--fail`                                          连接失败时不显示http错误</span><br><span class="line">`-o/--output`                                  把输出写到该文件中</span><br><span class="line">`-O/--remote-name`                      把输出写到该文件中，保留远程文件的文件名</span><br><span class="line">`-r/--range &lt;range&gt;`                      检索来自HTTP/1.1或FTP服务器字节范围</span><br><span class="line">`-s/--silent`                            静音模式。不输出任何东西</span><br><span class="line">如：</span><br><span class="line">``` curl -s -v -H &quot;mrlee: hello&quot; -- &quot;https://www.baidu.com&quot;</span><br></pre></td></tr></table></figure>
 <p>请求的内容为</p>
-<p>POST / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.55.0<br>Accept: <em>/</em><br>Mrlee: HELLO<br>Content-Length: 8<br>Content-Type: application/x-www-form-urlencoded</p>
-<p>1234567890</p>
-<p><strong>请求的格式</strong></p>
-<p>1 动词 路径 协议/版本<br>2 Key1: value1<br>2 Key2: value2<br>2 Key3: value3<br>2 Content-Type: application/x-www-form-urlencoded<br>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2 User-Agent: curl/7.54.0<br>3<br>4 要上传的数据</p>
-<p>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）。<br>第三部分永远都是一个回车（\n）。<br>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等。<br>这里的路径包括「查询参数」，但不包括「锚点」。<br>如果你没有写路径，那么路径默认为 /。<br>第 2 部分中的 Content-Type 标注了第 4 部分的格式。</p>
-<p><strong>用Chrome看请求内容</strong></p>
-<p>1.打开 Network，<br>2.地址栏输入网址，<br>3.在 Network 点击，查看 Request Headers，<br>4.点击「view source」，<br>5.就可以看到请求的前三部分了，<br>6.如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到。</p>
-<p><img src="/2019/03/13/HTTP的介绍/看请求.png" alt="用Chrome看请求示例"></p>
-<p><strong>#响应结构</strong></p>
-<p>请求了之后，应该都能得到一个响应。</p>
-<p>响应示例</p>
-<p>刷新百度首页得到的响应。</p>
-<p><img src="/2019/03/13/HTTP的介绍/响应示例.png" alt="响应示例"></p>
-<p>响应的内容是</p>
-<p>HTTP/1.1 200 OK<br>Bdpagetype: 2<br>Bdqid: 0x8c9a57e10003b3b4<br>Cache-Control: private<br>Connection: Keep-Alive<br>Content-Encoding: gzip<br>Content-Type: text/html;charset=utf-8<br>……<br>以下省略</p>
-<p><strong>响应的格式</strong></p>
-<p>1 协议/版本号 状态码 状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容</p>
-<p>其中状态码是服务器对浏览器说的话<br>1xx消息，这一类型的状态码，代表请求已被接受，需要继续处理。<br>2xx成功，这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。<br>3xx重定向，这类状态码代表需要客户端采取进一步的操作才能完成请求。<br>4xx客户端错误，由于明显的客户端错误（例如，格式错误的请求语法，太大的大小，无效的请求消息或欺骗性路由请求），服务器不能或不会处理该请求。<br>5xx服务器错误，表示服务器无法完成明显有效的请求。<br>第 2 部分中的 Content-Type 标注了第 4 部分的格式。<br>第 2 部分中的 Content-Type 遵循 MIME 规范。</p>
-<p><strong>用 Chrome 查看响应</strong></p>
-<p>1.打开 Network，<br>2.输入网址，<br>3.选中第一个响应，<br>4.查看 Response Headers，<br>5.点击「view source」，<br>6.你会看到响应的前两部分，<br>7.查看 Response 或者 Preview，你会看到响应的第 4 部分。</p>
-<p><img src="/2019/03/13/HTTP的介绍/看响应.png" alt="用Chrome看响应示例"></p>
-<p><strong>#curl 命令的使用</strong></p>
-<p>curl是一个利用URL规则在命令行下工作的文件传输工具，可以说是一款很强大的http命令行工具。它支持文件的上传和下载，是综合传输工具，但按传统，习惯称url为下载工具。</p>
-<p>语法：# curl [option] [url]<br>常见参数：<br>-A/–user-agent <string>              设置用户代理发送给服务器<br>-b/–cookie &lt;name=string/file&gt;    cookie字符串或文件读取位置<br>-c/–cookie-jar <file>                    操作结束后把cookie写入到这个文件中<br>-C/–continue-at <offset>            断点续转<br>-D/–dump-header <file>            把header信息写入到该文件中<br>-e/–referer                                  来源网址<br>-f/–fail                                          连接失败时不显示http错误<br>-o/–output                                  把输出写到该文件中<br>-O/–remote-name                      把输出写到该文件中，保留远程文件的文件名<br>-r/–range <range>                      检索来自HTTP/1.1或FTP服务器字节范围<br>-s/–silent                            静音模式。不输出任何东西<br>如：<br>curl -s -v -H “mrlee: hello” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></range></file></offset></file></string></p>
-<p>请求的内容为</p>
+<blockquote>
 <p>GET / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.54.0<br>Accept: <em>/</em><br>mrlee: hello</p>
 <p>curl -X POST -d “12345678” -s -v -H “mrlee: hello” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a><br>请求的内容为</p>
+</blockquote>
+<blockquote>
 <p>POST / HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: curl/7.54.0<br>Accept: <em>/</em><br>mrlee: hello<br>Content-Length: 8<br>Content-Type: application/x-www-form-urlencoded</p>
 <p>12345678</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/HTTP的介绍/" data-id="cjtg4nqhb0000lcr0nhadc6bq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/13/HTTP的介绍/" data-id="cjthc5lb40004t0r0y0lt5y88" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,19 +111,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/18/HTML的知识part2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/13/HTML的知识part1/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          HTML的知识part2
+          HTML的知识part1
         
       </div>
     </a>
   
   
-    <a href="/2019/03/13/HTML的知识part1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/03/04/第二篇博客/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">HTML的知识part1</div>
+      <div class="article-nav-title">某些基本基本命令行的介绍</div>
     </a>
   
 </nav>
@@ -192,11 +164,11 @@
           </li>
         
           <li>
-            <a href="/2019/03/13/HTTP的介绍/">HTTP的介绍</a>
+            <a href="/2019/03/13/HTML的知识part1/">HTML的知识part1</a>
           </li>
         
           <li>
-            <a href="/2019/03/13/HTML的知识part1/">HTML的知识part1</a>
+            <a href="/2019/03/13/HTTP的介绍/">HTTP的介绍</a>
           </li>
         
           <li>
