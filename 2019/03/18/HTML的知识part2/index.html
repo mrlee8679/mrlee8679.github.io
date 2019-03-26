@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt;a&amp;gt;;&amp;lt;form&amp;gt;;&amp;lt;h1&amp;gt; ~ &amp;lt;h6&amp;gt;;&amp;lt;iframe&amp;gt;;&amp;lt;input&amp;gt;;&amp;lt;selet&amp;gt;;&amp;lt;textarea&amp;gt;;&amp;lt;table&amp;gt;。 &amp;lt;a&amp;gt;&amp;lt;a&amp;gt;：anchor ,可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML的知识part2">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/HTML的知识part2/index.html">
+<meta property="og:site_name" content="李先森的博客">
+<meta property="og:description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt;a&amp;gt;;&amp;lt;form&amp;gt;;&amp;lt;h1&amp;gt; ~ &amp;lt;h6&amp;gt;;&amp;lt;iframe&amp;gt;;&amp;lt;input&amp;gt;;&amp;lt;selet&amp;gt;;&amp;lt;textarea&amp;gt;;&amp;lt;table&amp;gt;。 &amp;lt;a&amp;gt;&amp;lt;a&amp;gt;：anchor ,可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input2.png">
+<meta property="og:updated_time" content="2019-03-20T14:50:15.311Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML的知识part2">
+<meta name="twitter:description" content="这次我就来介绍一下 HTML 的常用标签如:&amp;lt;a&amp;gt;;&amp;lt;form&amp;gt;;&amp;lt;h1&amp;gt; ~ &amp;lt;h6&amp;gt;;&amp;lt;iframe&amp;gt;;&amp;lt;input&amp;gt;;&amp;lt;selet&amp;gt;;&amp;lt;textarea&amp;gt;;&amp;lt;table&amp;gt;。 &amp;lt;a&amp;gt;&amp;lt;a&amp;gt;：anchor ,可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/18/HTML的知识part2/input1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/18/HTML的知识part2/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTML的知识part2 | 李先森的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李先森的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/HTML的知识part2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李先森">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李先森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML的知识part2
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-18 17:59:22" itemprop="dateCreated datePublished" datetime="2019-03-18T17:59:22+08:00">2019-03-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-20 22:50:15" itemprop="dateModified" datetime="2019-03-20T22:50:15+08:00">2019-03-20</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这次我就来介绍一下 HTML 的常用标签如:<br><code>&lt;a&gt;</code>;<br><code>&lt;form&gt;</code>;<br><code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>;<br><code>&lt;iframe&gt;</code>;<br><code>&lt;input&gt;</code>;<br><code>&lt;selet&gt;</code>;<br><code>&lt;textarea&gt;</code>;<br><code>&lt;table&gt;</code>。</p>
+<h2 id="lt-a-gt"><a href="#lt-a-gt" class="headerlink" title="&lt;a&gt;"></a><code>&lt;a&gt;</code></h2><p><code>&lt;a&gt;</code>：anchor ,可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接，即定义超链接。</p>
+<p>属性</p>
+<p>download</p>
+<p>此属性指示浏览器下载 URL 而不是导航到它，因此将提示用户将其保存为本地文件。</p>
+<p>href</p>
+<p>包含超链接指向的 URL 或 URL 片段。一般基于 Web（HTTP）的文档时域名会加上 http：或 https：，当然也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的file:、ftp:和mailto：。（// 即代表无协议）。<br>当 href=”#” 时，页面并不会发请求，而是会返回到页面顶部。<br>当 href=”javascript:;” 时，这是一个伪装协议，伪协议可以实现「点击之后没有任何动作的 a 标签」。</p>
+<p>target</p>
+<p>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。<br>当 target=”_blank”时，会打开新页面；<br>当 target=”_self”时，会在当前页面加载；<br>当 target=”_parent”时，会在当前父级页面加载页面；<br>当 target=”_top”时，会在当前顶级页面加载页面。</p>
+<h2 id="lt-form-gt"><a href="#lt-form-gt" class="headerlink" title="&lt;form&gt;"></a><code>&lt;form&gt;</code></h2><p><code>&lt;from&gt;</code>：表示了文档中的一个区域，这个区域包含有交互控制元件，用来向web服务器提交信息。</p>
+<p>属性</p>
+<p>action<br>一个处理这个<code>&lt;form&gt;</code>信息的程序所在的URL。这个值可以被 <code>&lt;button&gt;</code> 或者 <code>&lt;input&gt;</code> 元素中的 formaction 属性重载（覆盖）。当<code>&lt;form&gt;</code>标签里面没有提交按钮是，不能将信息提交。<code>&lt;input&gt;</code>标签里当其 type=submit,时是唯一能确定该表单能被提交。<br>若用<code>&lt;button&gt;</code>标签标示提交按钮时，而且若表单里只有一个按钮时，且没有定义该<code>&lt;button&gt;</code>属性时，该<code>&lt;button&gt;</code>标签会自动升级为提交按钮；若该<code>&lt;button&gt;</code>标签被 type 属性定义时，则不会自动升级为提交按钮。</p>
+<h2 id="lt-h1-gt-lt-h6-gt"><a href="#lt-h1-gt-lt-h6-gt" class="headerlink" title="&lt;h1&gt; ~ &lt;h6&gt;"></a><code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code></h2><p><code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>：heading，呈现了六个不同的级别的标题，<code>&lt;h1&gt;</code> 级别最高，而 <code>&lt;h6&gt;</code> 级别最低。使用时注意，不要为了减小标题的字体而使用低级别的标题；避免跳过某级标题：始终要从 <code>&lt;h1&gt;</code> 开始，接下来依次使用 <code>&lt;h2&gt;</code> 等等；使用 <code>&lt;section&gt;</code> 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 <code>&lt;h1&gt;</code>，<code>&lt;h1&gt;</code> 应被用于表示页面的标题，其他的标题当从 <code>&lt;h2&gt;</code> 开始。在使用<code>&lt;section&gt;</code>时，应当为每个 <code>&lt;section&gt;</code>都使用一个 <code>&lt;h2&gt;</code>。</p>
+<p>属性</p>
+<p>frameborder</p>
+<p>取值为1时，告诉浏览器在当前iframe与其他iframe之间绘制边框，取0时则无需绘制此边框。</p>
+<p>name</p>
+<p>嵌入的浏览上下文（框架）的名称。该名称可以用作<code>&lt;a&gt;</code>标签，<code>&lt;form&gt;</code>标签的target属性值，或<code>&lt;input&gt;</code> 标签和 <code>&lt;button&gt;</code> 标签的formtaget属性值。</p>
+<p>src</p>
+<p>嵌套页面的URL地址。使用遵守同源策略的 ‘about:blank’ 来嵌套空白页。</p>
+<h2 id="lt-input-gt"><a href="#lt-input-gt" class="headerlink" title="&lt;input&gt;"></a><code>&lt;input&gt;</code></h2><p><code>&lt;input&gt;</code>：用于为基于Web的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和user agent。是空元素。<br><code>&lt;input&gt;</code>的工作方式因其类型属性的值而有很大差异，不同的类型会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 text 。</p>
+<p><code>&lt;input&gt;</code>的类型</p>
+<p>button</p>
+<p>无缺省行为按钮。</p>
+<p>checkbook</p>
+<p>复选框必须使用 value 属性定义此控件被提交时的值。</p>
+<p>password</p>
+<p>一个值被遮盖的单行文本字段。使用 maxlength 指定可以输入的值的最大长度 。</p>
+<p>radio</p>
+<p>单选按钮。必须使用 value 属性定义此控件被提交时的值。在同一个“单选按钮组”中，所有单选按钮的 name 属性使用同一个值；一个单选按钮组中是，同一时间只有一个单选按钮可以被选择。</p>
+<p>submit</p>
+<p>用于提交表单的按钮。</p>
+<p>text</p>
+<p>单行字段；换行会将自动从输入的值中移除。</p>
+<p>使用 label  “for” 属性 绑定到 <code>&lt;input&gt;</code> “id”属性上时，可以用<code>&lt;label&gt;</code>标签将<code>&lt;input&gt;</code>标签包起来来代替，这样可以减少变量的输入。如：</p>
+<p><img src="/2019/03/18/HTML的知识part2/input1.png" alt="使用 label  &quot;for&quot; 属性时"></p>
+<p><img src="/2019/03/18/HTML的知识part2/input2.png" alt="用&lt; label &gt;标签将&lt; input &gt;标签包起来"></p>
+<h2 id="lt-selet-gt"><a href="#lt-selet-gt" class="headerlink" title="&lt;selet&gt;"></a><code>&lt;selet&gt;</code></h2><p><code>&lt;selet&gt;</code>：表示一个控件，提供一个选项菜单，菜单内的选项为<code>&lt;option&gt;</code>。</p>
+<p>属性</p>
+<p>disabled</p>
+<p>这个属性表明一个用户是否可以操控该表单对象。 如果这个属性被定义时，则对应选项不可选。</p>
+<p>multiple</p>
+<p>这个属性标记select是否可以多选. 默认是单选。</p>
+<h2 id="lt-textarea-gt"><a href="#lt-textarea-gt" class="headerlink" title="&lt;textarea&gt;"></a><code>&lt;textarea&gt;</code></h2><p><code>&lt;textarea&gt;</code>：一个多行纯文本编辑控件。</p>
+<p>属性</p>
+<p>cols</p>
+<p>文本域的可视宽度，必须为正数。</p>
+<p>name</p>
+<p>元素的名称。</p>
+<p>rows</p>
+<p>元素的输入文本的行数（显示的高度）。<br>使用 row 和 cols 不能精确控制文本域的宽高，最好使用 CSS控制文本域的宽高。</p>
+<h2 id="lt-table-gt"><a href="#lt-table-gt" class="headerlink" title="&lt;table&gt;"></a><code>&lt;table&gt;</code></h2><p><code>&lt;table&gt;</code>：表示表格数据 — 即通过二维数据表表示的信息。该元素中只能允许有以下元素：<br>一个可选的 <code>&lt;caption&gt;</code> 元素<br>零个或多个的 <code>&lt;colgroup&gt;</code> 元素<br>一个可选的 <code>&lt;thead&gt;</code> 元素<br>一个可选的 <code>&lt;tfoot&gt;</code> 元素（<code>&lt;tfoot&gt;</code>元素出现在<code>&lt;tbody&gt;</code>或<code>&lt;tr&gt;</code>元素前后都可以。）<br>零个或多个 <code>&lt;tbody&gt;</code> 元素<br>一个或多个 <code>&lt;tr&gt;</code> 元素<br>在有 <code>&lt;thead&gt;</code> 元素下<code>&lt;tfoot&gt;</code>元素出现在<code>&lt;tbody&gt;</code>或<code>&lt;tr&gt;</code>元素前后都可以，浏览器会自动排序。<br>在<code>&lt;tr&gt;</code>元素里，表头要用<code>&lt;th&gt;</code>，数据用<code>&lt;td&gt;</code>。</p>
+<p>属性</p>
+<p>bgcolor </p>
+<p>这个属性定义了表格的背景颜色。 </p>
+<p>border </p>
+<p>这个整型元素使用像素，定义了表格边框的大小。如果设置为0，这意味着frame 属性被设置为空。如果设置为1，表示表格具有1px大小的边框。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/14/HTML的知识part1/" rel="next" title="HTML的知识part1">
+                <i class="fa fa-chevron-left"></i> HTML的知识part1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/23/CSSd的知识/" rel="prev" title="CSS的知识 patr1">
+                CSS的知识 patr1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">李先森</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-a-gt"><span class="nav-number">1.</span> <span class="nav-text">&lt;a&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-form-gt"><span class="nav-number">2.</span> <span class="nav-text">&lt;form&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-h1-gt-lt-h6-gt"><span class="nav-number">3.</span> <span class="nav-text">&lt;h1&gt; ~ &lt;h6&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-input-gt"><span class="nav-number">4.</span> <span class="nav-text">&lt;input&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-selet-gt"><span class="nav-number">5.</span> <span class="nav-text">&lt;selet&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-textarea-gt"><span class="nav-number">6.</span> <span class="nav-text">&lt;textarea&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-table-gt"><span class="nav-number">7.</span> <span class="nav-text">&lt;table&gt;</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李先森</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
