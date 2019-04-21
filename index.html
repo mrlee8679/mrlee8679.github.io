@@ -285,6 +285,340 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/原型与原型链/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李先森">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李先森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/21/原型与原型链/" class="post-title-link" itemprop="url">原型与原型链</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-21 17:30:17 / 修改时间：21:42:04" itemprop="dateCreated datePublished" datetime="2019-04-21T17:30:17+08:00">2019-04-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="全局对象-window"><a href="#全局对象-window" class="headerlink" title="全局对象 window"></a>全局对象 window</h2><p>ECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）<br>window 就是一个哈希表，有很多属性。</p>
+<p>window 的属性就是全局变量。</p>
+<p>这些全局变量分为两种：</p>
+<p>一种是 ECMAScript 规定的</p>
+<p>global.parseInt<br>global.parseFloat<br>global.Number<br>global.String<br>global.Boolean<br>global.Object</p>
+<p>一种是浏览器自己加的属性</p>
+<p>window.alert<br>window.prompt<br>window.comfirm<br>window.console.log<br>window.console.dir<br>window.document<br>window.document.createElement<br>window.document.getElementById</p>
+<h2 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h2><p>Number<br>var n = new Number(1) 创建一个 Number 对象</p>
+<p>String<br>var s = new String(‘hello’) 创建一个 String 对象</p>
+<p>Boolean<br>var b = new Boolean(true) 创建一个 Boolean 对象</p>
+<p>Object<br>var o1 = {}<br>var o2 = new Object()<br>o1 和 o2 没区别</p>
+<h2 id="公用的属性"><a href="#公用的属性" class="headerlink" title="公用的属性"></a>公用的属性</h2><p>所有对象都有 toString 和 valueOf 属性，但是我们没有必要给每个对象一个 toString 和 valueOf ，因为这样会很占内存，所以 JS 的做法是把 toString 和 valueOf 放在一个由公用属性组成的对象里，然后在每个对象里写入 <code>__proto__</code> ,让这个 <code>__proto__</code> 存储那个由公用属性组成的对象的地址，让 <code>__proto__</code> 应用公用属性。</p>
+<p>Number 、 String 、 Boolean 、 Object 都有各自对应的公有属性，并且这些公用属性中都有 <code>__proto__</code> 。其中 Number 、 String 、 Boolean 的 <code>__proto__</code> 都会引用 Object 的公有属性。</p>
+<p>每个对象（ object ）都有一个私有属性（ <code>__proto__</code>）指向它的原型对象（ prototype ）。该原型对象也有一个自己的原型对象( <code>__proto__</code> ) ，层层向上直到一个对象的原型对象为 null。</p>
+<p>当不写代码时 window 会指向 Number 、 String 、 Boolean 、 Object 四个全局函数，以为函数也是对象，所以这四个对象会分别指向四个哈希，这四个哈希里都会包含 prototype 与 <code>__proto__</code> ，这些 prototype 会分别指向对应的共用属性，如下图：</p>
+<p><img src="/2019/04/21/原型与原型链/prototype与__proto__.png" alt="不写代码时发生的事"></p>
+<p>就是因为这样，这些共用属性才不会被浏览器当做垃圾，被浏览器回收。</p>
+<h2 id="prototype-与-proto"><a href="#prototype-与-proto" class="headerlink" title="prototype 与 __proto__"></a>prototype 与 <code>__proto__</code></h2><p>当 var 对象 = new 函数() 时，又会有以下的关系：</p>
+<p>对象.<code>__proto__</code> === 函数.prototype（最重要的关系，以下都是推论）</p>
+<p>如：<br>var number = new Number()<br>number.<code>__proto__</code> === Number.prototype</p>
+<p>函数.<code>__proto__</code> === Function.prototype</p>
+<p>Function.<code>__proto__</code> === Function.prototype</p>
+<p>Function.prototype.<code>__proto__</code> === Object.prototype</p>
+<p>Object.prototype.<code>__proto__</code> === null</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/JS的数据类型转换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李先森">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李先森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/19/JS的数据类型转换/" class="post-title-link" itemprop="url">JS 的数据类型转换与对象的储存</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-19 00:41:44" itemprop="dateCreated datePublished" datetime="2019-04-19T00:41:44+08:00">2019-04-19</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-21 21:39:32" itemprop="dateModified" datetime="2019-04-21T21:39:32+08:00">2019-04-21</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="转换成-String"><a href="#转换成-String" class="headerlink" title="转换成 String"></a>转换成 String</h2><p>总共有3种方法可以把其他数据类型转变成 String 类型</p>
+<h3 id="tostring"><a href="#tostring" class="headerlink" title="tostring"></a>tostring</h3><p>用tostring时，需要注意的是，对 null 和 undefined 使用toString 是会报错的，用 toString 转 object 会得到 “[object Object]” 。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var n = 1</span><br><span class="line">n.toString()</span><br><span class="line">// &quot;1&quot;</span><br><span class="line"></span><br><span class="line">var object = &#123;a:&apos;1&apos;&#125;</span><br><span class="line">object.toString()</span><br><span class="line">// &quot;[object Object]&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="String-和-‘’"><a href="#String-和-‘’" class="headerlink" title="String 和 + ‘’"></a>String 和 + ‘’</h3><p>第二与第三种方法是使用全局函数 String() 与使用 + ‘’ ,这两种方法可以把所有类型都转换成 String ，效果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String(&#123;&#125;) // &quot;[object Object]&quot;</span><br><span class="line"></span><br><span class="line">null + &apos;&apos; // &quot;null&quot;</span><br><span class="line"></span><br><span class="line">undefined + &apos;&apos; // &quot;undefined&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="转换成-Number"><a href="#转换成-Number" class="headerlink" title="转换成 Number"></a>转换成 Number</h2><p>1、使用 Number(‘1’) === 1；<br>2、使用 parseInt(‘1’,10) === 1 ,用这种方法时最好记得把后面的 10 写上，这个 10 代表十进制。若写成 parseInt(‘011’) 得到数字会是11，而不是八进制下的9，要使用八进制必须在后面加上8 如 parseInt(‘011’,8) === 9 。当写 parseInt(‘a’) 时得到的是NaN。<br>3、使用 parseFloat(‘1.23’) === 1.23 , 表示浮点数；<br>4、’1’-0 === 1;<br>5、+’1’ === 1 或者 -‘1’ === -1</p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>可以使用 Boolean() 将其他类型的数据转换成 bolean 型的数据，也可以在要转换的数据前加 <code>!!</code> 这样也能做到与 Boolean 同样的效果。 boolean 型数据只有2个个值，就是 true 和 false 。有5个值，转换成 boolean 时会是 false ，这5个值被称为 falsy 值，它们分别是 0 、 NaN 、 ‘’ 、 undefined 、 null ，所有的 object 转换成 boolean 都会是true 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">!! &#123;&#125; // true</span><br><span class="line"></span><br><span class="line">!! 1 // true</span><br><span class="line"></span><br><span class="line">!! 0 // false</span><br><span class="line"></span><br><span class="line">!! NaN // false</span><br><span class="line"></span><br><span class="line">!! &apos;&apos; // false</span><br><span class="line"></span><br><span class="line">!! undefined // false</span><br><span class="line"></span><br><span class="line">!! null // false</span><br></pre></td></tr></table></figure>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>其他类型与对象的区别就在于存储的方式不一样。当 JS 分到内存后会分为2个大区域进行存储，分别是代码区和数据区，如 var a = 1 时，a 会存在代码区，1就会存在数据区，然后 a 和1就会产生关联。接下来主要讨论的是数据区发生了什么。</p>
+<p>数据区的分为 Stack 栈内存与 Heap 堆内存。一般类型的数据就存放在 Stack 内存，有 Number 、 String 、 Symbol 、 Boolean 、 Null 和 Undefined </p>
+<p><img src="/2019/04/19/JS的数据类型转换/基本类型.png" alt="基本类型的存储"></p>
+<p>而 Object 类型的存储有点不一样，var b = {name:’son’} 他会把内容 (name:’son’) 存在 Heap 堆内存里，并会生成一个地址，然后在 b 的对应的 Stack 栈内存里存的就是那个地址，可以说是 b 引用了这个对象。</p>
+<p><img src="/2019/04/19/JS的数据类型转换/对象.png" alt="基本类型的存储"></p>
+<p>当一个对象没有被引用时，那这个对象就是垃圾，会被浏览器回收。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/JS里的数据类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1675,7 +2009,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

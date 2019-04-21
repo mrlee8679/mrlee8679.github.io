@@ -96,24 +96,26 @@
 
 
 
-  <meta name="description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+  <meta name="description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS的知识 patr1">
-<meta property="og:url" content="http://yoursite.com/2019/03/23/CSSd的知识/index.html">
+<meta property="og:title" content="原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2019/04/21/原型与原型链/index.html">
 <meta property="og:site_name" content="李先森的博客">
-<meta property="og:description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+<meta property="og:description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-26T02:13:08.420Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/21/原型与原型链/prototype与__proto__.png">
+<meta property="og:updated_time" content="2019-04-21T13:42:04.462Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS的知识 patr1">
-<meta name="twitter:description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+<meta name="twitter:title" content="原型与原型链">
+<meta name="twitter:description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/21/原型与原型链/prototype与__proto__.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/23/CSSd的知识/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/21/原型与原型链/">
 
 
 
@@ -123,7 +125,7 @@
   };
 </script>
 
-  <title>CSS的知识 patr1 | 李先森的博客</title>
+  <title>原型与原型链 | 李先森的博客</title>
   
 
 
@@ -288,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/CSSd的知识/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/原型与原型链/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李先森">
@@ -305,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS的知识 patr1
+          <h1 class="post-title" itemprop="name headline">原型与原型链
 
               
             
@@ -331,24 +333,12 @@
                 
               
 
-              <time title="创建时间：2019-03-23 16:11:12" itemprop="dateCreated datePublished" datetime="2019-03-23T16:11:12+08:00">2019-03-23</time>
+              <time title="创建时间：2019-04-21 17:30:17 / 修改时间：21:42:04" itemprop="dateCreated datePublished" datetime="2019-04-21T17:30:17+08:00">2019-04-21</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-26 10:13:08" itemprop="dateModified" datetime="2019-03-26T10:13:08+08:00">2019-03-26</time>
               
             
           </span>
@@ -382,12 +372,30 @@
       
 
       
-        <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>CSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS 3。</p>
-<p>CSS 与 HTML 和 JavaScript 并称 Web 的三大核心技术。一般用它定义 HTML 元素的样式，但它也能用于其他标记语言，如 SVG 和 XML。</p>
-<h2 id="HTML中加入CSS"><a href="#HTML中加入CSS" class="headerlink" title="HTML中加入CSS"></a>HTML中加入CSS</h2><p>虽然可以把用<code>&lt;style&gt;</code>标签来添加样式，但有些标签中定义太多，导致<code>&lt;style&gt;</code>标签太长，这时可以把 style 弄出来，单独放在 CSS 文件中，如把 CSS 文件命名为 x.css ，在html文档中的<code>&lt;head&gt;</code>标签中加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./x.css&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这样就把 CSS 文件与 html 文件关联起来了。</p>
-<p>一条 CSS 规则包含一个 选择符 和一组 属性 定义。下面这个例子用来将页面中的所有 <code>&lt;div&gt;</code> 标签显示为黑色背景和红色文本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* p 选择符用来选择页面中的所有 &lt;p&gt; 标签 */</span><br><span class="line">p &#123;</span><br><span class="line">    /* background-color 属性用来定义元素的背景色，这里为黑色 */</span><br><span class="line">    background-color: black；</span><br><span class="line"></span><br><span class="line">    /* color 属性用来定义文本颜色，这里为红色 */</span><br><span class="line">    color: red</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在编写CSS时要注意各个选择之间的优先级，因为 CSS 中的 “C” 表示 “层叠的”，意为多个选择符之间具有特定的优先级。这一点非常重要，因为复杂网站可能会有非常多的 CSS 规则，因此必须规定好这些规则的优先级，以免乱套。</p>
+        <h2 id="全局对象-window"><a href="#全局对象-window" class="headerlink" title="全局对象 window"></a>全局对象 window</h2><p>ECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）<br>window 就是一个哈希表，有很多属性。</p>
+<p>window 的属性就是全局变量。</p>
+<p>这些全局变量分为两种：</p>
+<p>一种是 ECMAScript 规定的</p>
+<p>global.parseInt<br>global.parseFloat<br>global.Number<br>global.String<br>global.Boolean<br>global.Object</p>
+<p>一种是浏览器自己加的属性</p>
+<p>window.alert<br>window.prompt<br>window.comfirm<br>window.console.log<br>window.console.dir<br>window.document<br>window.document.createElement<br>window.document.getElementById</p>
+<h2 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h2><p>Number<br>var n = new Number(1) 创建一个 Number 对象</p>
+<p>String<br>var s = new String(‘hello’) 创建一个 String 对象</p>
+<p>Boolean<br>var b = new Boolean(true) 创建一个 Boolean 对象</p>
+<p>Object<br>var o1 = {}<br>var o2 = new Object()<br>o1 和 o2 没区别</p>
+<h2 id="公用的属性"><a href="#公用的属性" class="headerlink" title="公用的属性"></a>公用的属性</h2><p>所有对象都有 toString 和 valueOf 属性，但是我们没有必要给每个对象一个 toString 和 valueOf ，因为这样会很占内存，所以 JS 的做法是把 toString 和 valueOf 放在一个由公用属性组成的对象里，然后在每个对象里写入 <code>__proto__</code> ,让这个 <code>__proto__</code> 存储那个由公用属性组成的对象的地址，让 <code>__proto__</code> 应用公用属性。</p>
+<p>Number 、 String 、 Boolean 、 Object 都有各自对应的公有属性，并且这些公用属性中都有 <code>__proto__</code> 。其中 Number 、 String 、 Boolean 的 <code>__proto__</code> 都会引用 Object 的公有属性。</p>
+<p>每个对象（ object ）都有一个私有属性（ <code>__proto__</code>）指向它的原型对象（ prototype ）。该原型对象也有一个自己的原型对象( <code>__proto__</code> ) ，层层向上直到一个对象的原型对象为 null。</p>
+<p>当不写代码时 window 会指向 Number 、 String 、 Boolean 、 Object 四个全局函数，以为函数也是对象，所以这四个对象会分别指向四个哈希，这四个哈希里都会包含 prototype 与 <code>__proto__</code> ，这些 prototype 会分别指向对应的共用属性，如下图：</p>
+<p><img src="/2019/04/21/原型与原型链/prototype与__proto__.png" alt="不写代码时发生的事"></p>
+<p>就是因为这样，这些共用属性才不会被浏览器当做垃圾，被浏览器回收。</p>
+<h2 id="prototype-与-proto"><a href="#prototype-与-proto" class="headerlink" title="prototype 与 __proto__"></a>prototype 与 <code>__proto__</code></h2><p>当 var 对象 = new 函数() 时，又会有以下的关系：</p>
+<p>对象.<code>__proto__</code> === 函数.prototype（最重要的关系，以下都是推论）</p>
+<p>如：<br>var number = new Number()<br>number.<code>__proto__</code> === Number.prototype</p>
+<p>函数.<code>__proto__</code> === Function.prototype</p>
+<p>Function.<code>__proto__</code> === Function.prototype</p>
+<p>Function.prototype.<code>__proto__</code> === Object.prototype</p>
+<p>Object.prototype.<code>__proto__</code> === null</p>
 
       
     </div>
@@ -418,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/18/HTML的知识part2/" rel="next" title="HTML的知识part2">
-                <i class="fa fa-chevron-left"></i> HTML的知识part2
+              <a href="/2019/04/19/JS的数据类型转换/" rel="next" title="JS 的数据类型转换与对象的储存">
+                <i class="fa fa-chevron-left"></i> JS 的数据类型转换与对象的储存
               </a>
             
           </div>
@@ -427,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/26/CSS小技巧/" rel="prev" title="CSS小技巧">
-                CSS小技巧 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML中加入CSS"><span class="nav-number">2.</span> <span class="nav-text">HTML中加入CSS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局对象-window"><span class="nav-number">1.</span> <span class="nav-text">全局对象 window</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局函数"><span class="nav-number">2.</span> <span class="nav-text">全局函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公用的属性"><span class="nav-number">3.</span> <span class="nav-text">公用的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prototype-与-proto"><span class="nav-number">4.</span> <span class="nav-text">prototype 与 __proto__</span></a></li></ol></div>
             
 
           </div>

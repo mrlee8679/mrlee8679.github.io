@@ -96,24 +96,27 @@
 
 
 
-  <meta name="description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+  <meta name="description" content="转换成 String总共有3种方法可以把其他数据类型转变成 String 类型 tostring用tostring时，需要注意的是，对 null 和 undefined 使用toString 是会报错的，用 toString 转 object 会得到 “[object Object]” 。如下： 1234567var n = 1n.toString()// &amp;quot;1&amp;quot;var obj">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS的知识 patr1">
-<meta property="og:url" content="http://yoursite.com/2019/03/23/CSSd的知识/index.html">
+<meta property="og:title" content="JS 的数据类型转换与对象的储存">
+<meta property="og:url" content="http://yoursite.com/2019/04/19/JS的数据类型转换/index.html">
 <meta property="og:site_name" content="李先森的博客">
-<meta property="og:description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+<meta property="og:description" content="转换成 String总共有3种方法可以把其他数据类型转变成 String 类型 tostring用tostring时，需要注意的是，对 null 和 undefined 使用toString 是会报错的，用 toString 转 object 会得到 “[object Object]” 。如下： 1234567var n = 1n.toString()// &amp;quot;1&amp;quot;var obj">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-26T02:13:08.420Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/19/JS的数据类型转换/基本类型.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/19/JS的数据类型转换/对象.png">
+<meta property="og:updated_time" content="2019-04-21T13:39:32.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS的知识 patr1">
-<meta name="twitter:description" content="CSSCSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS">
+<meta name="twitter:title" content="JS 的数据类型转换与对象的储存">
+<meta name="twitter:description" content="转换成 String总共有3种方法可以把其他数据类型转变成 String 类型 tostring用tostring时，需要注意的是，对 null 和 undefined 使用toString 是会报错的，用 toString 转 object 会得到 “[object Object]” 。如下： 1234567var n = 1n.toString()// &amp;quot;1&amp;quot;var obj">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/19/JS的数据类型转换/基本类型.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/23/CSSd的知识/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/19/JS的数据类型转换/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>CSS的知识 patr1 | 李先森的博客</title>
+  <title>JS 的数据类型转换与对象的储存 | 李先森的博客</title>
   
 
 
@@ -288,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/CSSd的知识/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/JS的数据类型转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李先森">
@@ -305,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS的知识 patr1
+          <h1 class="post-title" itemprop="name headline">JS 的数据类型转换与对象的储存
 
               
             
@@ -331,7 +334,7 @@
                 
               
 
-              <time title="创建时间：2019-03-23 16:11:12" itemprop="dateCreated datePublished" datetime="2019-03-23T16:11:12+08:00">2019-03-23</time>
+              <time title="创建时间：2019-04-19 00:41:44" itemprop="dateCreated datePublished" datetime="2019-04-19T00:41:44+08:00">2019-04-19</time>
             
 
             
@@ -348,7 +351,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-26 10:13:08" itemprop="dateModified" datetime="2019-03-26T10:13:08+08:00">2019-03-26</time>
+                <time title="修改时间：2019-04-21 21:39:32" itemprop="dateModified" datetime="2019-04-21T21:39:32+08:00">2019-04-21</time>
               
             
           </span>
@@ -382,12 +385,20 @@
       
 
       
-        <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>CSS（Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条CSS的样式定义括属和属性值，它们共同决定网页的外观。它的标准规范同样也由 W3C 制定和维护。目前，使用最广泛使用的版本是 CSS 2.1，从2011年开始 CSS 被分为多个模块单独升级，它们统称为 CSS 3。</p>
-<p>CSS 与 HTML 和 JavaScript 并称 Web 的三大核心技术。一般用它定义 HTML 元素的样式，但它也能用于其他标记语言，如 SVG 和 XML。</p>
-<h2 id="HTML中加入CSS"><a href="#HTML中加入CSS" class="headerlink" title="HTML中加入CSS"></a>HTML中加入CSS</h2><p>虽然可以把用<code>&lt;style&gt;</code>标签来添加样式，但有些标签中定义太多，导致<code>&lt;style&gt;</code>标签太长，这时可以把 style 弄出来，单独放在 CSS 文件中，如把 CSS 文件命名为 x.css ，在html文档中的<code>&lt;head&gt;</code>标签中加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./x.css&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这样就把 CSS 文件与 html 文件关联起来了。</p>
-<p>一条 CSS 规则包含一个 选择符 和一组 属性 定义。下面这个例子用来将页面中的所有 <code>&lt;div&gt;</code> 标签显示为黑色背景和红色文本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* p 选择符用来选择页面中的所有 &lt;p&gt; 标签 */</span><br><span class="line">p &#123;</span><br><span class="line">    /* background-color 属性用来定义元素的背景色，这里为黑色 */</span><br><span class="line">    background-color: black；</span><br><span class="line"></span><br><span class="line">    /* color 属性用来定义文本颜色，这里为红色 */</span><br><span class="line">    color: red</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在编写CSS时要注意各个选择之间的优先级，因为 CSS 中的 “C” 表示 “层叠的”，意为多个选择符之间具有特定的优先级。这一点非常重要，因为复杂网站可能会有非常多的 CSS 规则，因此必须规定好这些规则的优先级，以免乱套。</p>
+        <h2 id="转换成-String"><a href="#转换成-String" class="headerlink" title="转换成 String"></a>转换成 String</h2><p>总共有3种方法可以把其他数据类型转变成 String 类型</p>
+<h3 id="tostring"><a href="#tostring" class="headerlink" title="tostring"></a>tostring</h3><p>用tostring时，需要注意的是，对 null 和 undefined 使用toString 是会报错的，用 toString 转 object 会得到 “[object Object]” 。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var n = 1</span><br><span class="line">n.toString()</span><br><span class="line">// &quot;1&quot;</span><br><span class="line"></span><br><span class="line">var object = &#123;a:&apos;1&apos;&#125;</span><br><span class="line">object.toString()</span><br><span class="line">// &quot;[object Object]&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="String-和-‘’"><a href="#String-和-‘’" class="headerlink" title="String 和 + ‘’"></a>String 和 + ‘’</h3><p>第二与第三种方法是使用全局函数 String() 与使用 + ‘’ ,这两种方法可以把所有类型都转换成 String ，效果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String(&#123;&#125;) // &quot;[object Object]&quot;</span><br><span class="line"></span><br><span class="line">null + &apos;&apos; // &quot;null&quot;</span><br><span class="line"></span><br><span class="line">undefined + &apos;&apos; // &quot;undefined&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="转换成-Number"><a href="#转换成-Number" class="headerlink" title="转换成 Number"></a>转换成 Number</h2><p>1、使用 Number(‘1’) === 1；<br>2、使用 parseInt(‘1’,10) === 1 ,用这种方法时最好记得把后面的 10 写上，这个 10 代表十进制。若写成 parseInt(‘011’) 得到数字会是11，而不是八进制下的9，要使用八进制必须在后面加上8 如 parseInt(‘011’,8) === 9 。当写 parseInt(‘a’) 时得到的是NaN。<br>3、使用 parseFloat(‘1.23’) === 1.23 , 表示浮点数；<br>4、’1’-0 === 1;<br>5、+’1’ === 1 或者 -‘1’ === -1</p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>可以使用 Boolean() 将其他类型的数据转换成 bolean 型的数据，也可以在要转换的数据前加 <code>!!</code> 这样也能做到与 Boolean 同样的效果。 boolean 型数据只有2个个值，就是 true 和 false 。有5个值，转换成 boolean 时会是 false ，这5个值被称为 falsy 值，它们分别是 0 、 NaN 、 ‘’ 、 undefined 、 null ，所有的 object 转换成 boolean 都会是true 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">!! &#123;&#125; // true</span><br><span class="line"></span><br><span class="line">!! 1 // true</span><br><span class="line"></span><br><span class="line">!! 0 // false</span><br><span class="line"></span><br><span class="line">!! NaN // false</span><br><span class="line"></span><br><span class="line">!! &apos;&apos; // false</span><br><span class="line"></span><br><span class="line">!! undefined // false</span><br><span class="line"></span><br><span class="line">!! null // false</span><br></pre></td></tr></table></figure>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>其他类型与对象的区别就在于存储的方式不一样。当 JS 分到内存后会分为2个大区域进行存储，分别是代码区和数据区，如 var a = 1 时，a 会存在代码区，1就会存在数据区，然后 a 和1就会产生关联。接下来主要讨论的是数据区发生了什么。</p>
+<p>数据区的分为 Stack 栈内存与 Heap 堆内存。一般类型的数据就存放在 Stack 内存，有 Number 、 String 、 Symbol 、 Boolean 、 Null 和 Undefined </p>
+<p><img src="/2019/04/19/JS的数据类型转换/基本类型.png" alt="基本类型的存储"></p>
+<p>而 Object 类型的存储有点不一样，var b = {name:’son’} 他会把内容 (name:’son’) 存在 Heap 堆内存里，并会生成一个地址，然后在 b 的对应的 Stack 栈内存里存的就是那个地址，可以说是 b 引用了这个对象。</p>
+<p><img src="/2019/04/19/JS的数据类型转换/对象.png" alt="基本类型的存储"></p>
+<p>当一个对象没有被引用时，那这个对象就是垃圾，会被浏览器回收。</p>
 
       
     </div>
@@ -418,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/18/HTML的知识part2/" rel="next" title="HTML的知识part2">
-                <i class="fa fa-chevron-left"></i> HTML的知识part2
+              <a href="/2019/04/17/JS里的数据类型/" rel="next" title="里的数据类型">
+                <i class="fa fa-chevron-left"></i> 里的数据类型
               </a>
             
           </div>
@@ -428,8 +439,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/26/CSS小技巧/" rel="prev" title="CSS小技巧">
-                CSS小技巧 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/21/原型与原型链/" rel="prev" title="原型与原型链">
+                原型与原型链 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -541,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML中加入CSS"><span class="nav-number">2.</span> <span class="nav-text">HTML中加入CSS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#转换成-String"><span class="nav-number">1.</span> <span class="nav-text">转换成 String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tostring"><span class="nav-number">1.1.</span> <span class="nav-text">tostring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-和-‘’"><span class="nav-number">1.2.</span> <span class="nav-text">String 和 + ‘’</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换成-Number"><span class="nav-number">2.</span> <span class="nav-text">转换成 Number</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean"><span class="nav-number">3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">4.</span> <span class="nav-text">Object</span></a></li></ol></div>
             
 
           </div>
