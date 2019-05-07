@@ -96,26 +96,24 @@
 
 
 
-  <meta name="description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
+  <meta name="description" content="基本概念DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。 浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原型与原型链">
-<meta property="og:url" content="http://yoursite.com/2019/04/21/原型与原型链/index.html">
+<meta property="og:title" content="DOM常用API（1）">
+<meta property="og:url" content="http://yoursite.com/2019/04/27/DOM常用API/index.html">
 <meta property="og:site_name" content="李先森的博客">
-<meta property="og:description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
+<meta property="og:description" content="基本概念DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。 浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/04/21/原型与原型链/prototype与__proto__.png">
-<meta property="og:updated_time" content="2019-04-21T13:42:04.462Z">
+<meta property="og:updated_time" content="2019-05-07T13:22:02.250Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原型与原型链">
-<meta name="twitter:description" content="全局对象 windowECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）window 就是一个哈希表，有很多属性。 window 的属性就是全局变量。 这些全局变量分为两种： 一种是 ECMAScript 规定的 global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglob">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/21/原型与原型链/prototype与__proto__.png">
+<meta name="twitter:title" content="DOM常用API（1）">
+<meta name="twitter:description" content="基本概念DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。 浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/21/原型与原型链/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/27/DOM常用API/">
 
 
 
@@ -125,7 +123,7 @@
   };
 </script>
 
-  <title>原型与原型链 | 李先森的博客</title>
+  <title>DOM常用API（1） | 李先森的博客</title>
   
 
 
@@ -290,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/原型与原型链/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/27/DOM常用API/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李先森">
@@ -307,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原型与原型链
+          <h1 class="post-title" itemprop="name headline">DOM常用API（1）
 
               
             
@@ -333,12 +331,24 @@
                 
               
 
-              <time title="创建时间：2019-04-21 17:30:17 / 修改时间：21:42:04" itemprop="dateCreated datePublished" datetime="2019-04-21T17:30:17+08:00">2019-04-21</time>
+              <time title="创建时间：2019-04-27 19:02:42" itemprop="dateCreated datePublished" datetime="2019-04-27T19:02:42+08:00">2019-04-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-07 21:22:02" itemprop="dateModified" datetime="2019-05-07T21:22:02+08:00">2019-05-07</time>
               
             
           </span>
@@ -372,30 +382,18 @@
       
 
       
-        <h2 id="全局对象-window"><a href="#全局对象-window" class="headerlink" title="全局对象 window"></a>全局对象 window</h2><p>ECMAScript 规定全局对象叫做 global，但是浏览器把 window 作为全局对象（浏览器先存在的）<br>window 就是一个哈希表，有很多属性。</p>
-<p>window 的属性就是全局变量。</p>
-<p>这些全局变量分为两种：</p>
-<p>一种是 ECMAScript 规定的</p>
-<p>global.parseInt<br>global.parseFloat<br>global.Number<br>global.String<br>global.Boolean<br>global.Object</p>
-<p>一种是浏览器自己加的属性</p>
-<p>window.alert<br>window.prompt<br>window.comfirm<br>window.console.log<br>window.console.dir<br>window.document<br>window.document.createElement<br>window.document.getElementById</p>
-<h2 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h2><p>Number<br>var n = new Number(1) 创建一个 Number 对象</p>
-<p>String<br>var s = new String(‘hello’) 创建一个 String 对象</p>
-<p>Boolean<br>var b = new Boolean(true) 创建一个 Boolean 对象</p>
-<p>Object<br>var o1 = {}<br>var o2 = new Object()<br>o1 和 o2 没区别</p>
-<h2 id="公用的属性"><a href="#公用的属性" class="headerlink" title="公用的属性"></a>公用的属性</h2><p>所有对象都有 toString 和 valueOf 属性，但是我们没有必要给每个对象一个 toString 和 valueOf ，因为这样会很占内存，所以 JS 的做法是把 toString 和 valueOf 放在一个由公用属性组成的对象里，然后在每个对象里写入 <code>__proto__</code> ,让这个 <code>__proto__</code> 存储那个由公用属性组成的对象的地址，让 <code>__proto__</code> 应用公用属性。</p>
-<p>Number 、 String 、 Boolean 、 Object 都有各自对应的公有属性，并且这些公用属性中都有 <code>__proto__</code> 。其中 Number 、 String 、 Boolean 的 <code>__proto__</code> 都会引用 Object 的公有属性。</p>
-<p>每个对象（ object ）都有一个私有属性（ <code>__proto__</code>）指向它的原型对象（ prototype ）。该原型对象也有一个自己的原型对象( <code>__proto__</code> ) ，层层向上直到一个对象的原型对象为 null。</p>
-<p>当不写代码时 window 会指向 Number 、 String 、 Boolean 、 Object 四个全局函数，以为函数也是对象，所以这四个对象会分别指向四个哈希，这四个哈希里都会包含 prototype 与 <code>__proto__</code> ，这些 prototype 会分别指向对应的共用属性，如下图：</p>
-<p><img src="/2019/04/21/原型与原型链/prototype与__proto__.png" alt="不写代码时发生的事"></p>
-<p>就是因为这样，这些共用属性才不会被浏览器当做垃圾，被浏览器回收。</p>
-<h2 id="prototype-与-proto"><a href="#prototype-与-proto" class="headerlink" title="prototype 与 __proto__"></a>prototype 与 <code>__proto__</code></h2><p>当 var 对象 = new 函数() 时，又会有以下的关系：</p>
-<p>对象.<code>__proto__</code> === 函数.prototype（最重要的关系，以下都是推论）</p>
-<p>如：<br>var number = new Number()<br>number.<code>__proto__</code> === Number.prototype</p>
-<p>函数.<code>__proto__</code> === Function.prototype</p>
-<p>Function.<code>__proto__</code> === Function.prototype</p>
-<p>Function.prototype.<code>__proto__</code> === Object.prototype</p>
-<p>Object.prototype.<code>__proto__</code> === null</p>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。</p>
+<p>浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有规范的对外接口。</p>
+<p>DOM 只是一个接口规范，可以用各种语言实现。所以严格地说，DOM 不是 JavaScript 语法的一部分，但是 DOM 操作是 JavaScript 最常见的任务，离开了 DOM，JavaScript 就无法控制网页。另一方面，JavaScript 也是最常用于 DOM 操作的语言。</p>
+<p>DOM1级定义了一个Node接口，该接口由DOM中所有节点类型实现。这个Node接口在JS中是作为Node类型实现的。在IE9以下版本无法访问到这个类型，JS中所有节点都继承自Node类型，都共享着相同的基本属性和方法。<br>Node有一个属性nodeType表示Node的类型，它是一个整数，其数值分别表示相应的Node类型，具体如下：<br>Node.ELEMENT_NODE(标签节点):1<br>Node.ATTRIBUTE_NODE(属性节点):2<br>Node.TEXT_NODE(文本节点):3<br>Node.CDATA_SECTION_NODE(CDATA节点):4<br>Node.ENTITY_REFERENCE_NODE(实体引用节点):5<br>Node.ENTITY_NODE(实体节点):6<br>Node.PROCESSING_INSTRUCTION_NODE(处理指令节点):7<br>Node.COMMENT_NODE(注释节点):8<br>Node.DOCUMENT_NODE(文档节点):9<br>Node.DOCUMENT_TYPE_NODE(文档类型节点):10<br>Node.DOCUMENT_FRAGMENT_NODE(文档段节点):11<br>Node.NOTATION_NODE(DTD声明节点):12</p>
+<h2 id="节点创建型-API"><a href="#节点创建型-API" class="headerlink" title="节点创建型 API"></a>节点创建型 API</h2><h3 id="creatElement"><a href="#creatElement" class="headerlink" title="creatElement"></a>creatElement</h3><p>createElement通过传入指定的一个标签名来创建一个元素，如果传入的标签名是一个未知的，则会创建一个自定义的标签，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var div = document.createElement(&quot;div&quot;);</span><br></pre></td></tr></table></figure>
+<p>使用createElement要注意：通过createElement创建的元素并不属于html文档，它只是创建出来，并未添加到html文档中，要调用appendChild或insertBefore等方法将其添加到HTML文档树中。</p>
+<h3 id="createTextNode"><a href="#createTextNode" class="headerlink" title="createTextNode"></a>createTextNode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var textNode = document.createTextNode(&quot;一个TextNode&quot;);</span><br></pre></td></tr></table></figure>
+<p>createTextNode接收一个参数，这个参数就是文本节点中的文本，和createElement一样，创建后的文本节点也只是独立的一个节点，同样需要appendChild将其添加到HTML文档树中.</p>
+<h3 id="cloneNode"><a href="#cloneNode" class="headerlink" title="cloneNode"></a>cloneNode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var parent = document.getElementById(&quot;parentElement&quot;); </span><br><span class="line">var parent2 = parent.cloneNode(true);// 传入true</span><br><span class="line">parent2.id = &quot;parent2&quot;;</span><br></pre></td></tr></table></figure>
+<p>这段代码通过cloneNode复制了一份parent元素，其中cloneNode的参数为true，表示parent的子节点也被复制，如果传入false，则表示只复制了parent节点。</p>
+<h3 id="createDocumentFragment"><a href="#createDocumentFragment" class="headerlink" title="createDocumentFragment"></a>createDocumentFragment</h3><p>createDocumentFragment方法用来创建一个DocumentFragment。DocumentFragment表示一种轻量级的文档，它的作用主要是存储临时的节点用来准备添加到文档中。</p>
 
       
     </div>
@@ -426,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/19/JS的数据类型转换/" rel="next" title="JS 的数据类型转换与对象的储存">
-                <i class="fa fa-chevron-left"></i> JS 的数据类型转换与对象的储存
+              <a href="/2019/04/21/原型与原型链/" rel="next" title="原型与原型链">
+                <i class="fa fa-chevron-left"></i> 原型与原型链
               </a>
             
           </div>
@@ -436,8 +434,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/27/DOM常用API/" rel="prev" title="DOM常用API（1）">
-                DOM常用API（1） <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/07/jQuery/" rel="prev" title="一个 jQuery 的 API">
+                一个 jQuery 的 API <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局对象-window"><span class="nav-number">1.</span> <span class="nav-text">全局对象 window</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局函数"><span class="nav-number">2.</span> <span class="nav-text">全局函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公用的属性"><span class="nav-number">3.</span> <span class="nav-text">公用的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prototype-与-proto"><span class="nav-number">4.</span> <span class="nav-text">prototype 与 __proto__</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点创建型-API"><span class="nav-number">2.</span> <span class="nav-text">节点创建型 API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#creatElement"><span class="nav-number">2.1.</span> <span class="nav-text">creatElement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#createTextNode"><span class="nav-number">2.2.</span> <span class="nav-text">createTextNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cloneNode"><span class="nav-number">2.3.</span> <span class="nav-text">cloneNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#createDocumentFragment"><span class="nav-number">2.4.</span> <span class="nav-text">createDocumentFragment</span></a></li></ol></li></ol></div>
             
 
           </div>
